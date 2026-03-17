@@ -28,11 +28,12 @@ def index():
                 if res['cat'] == 'maker': maker_news.append(item)
                 else: shop_news.append(item)
         except: continue
+    
     return render_template_string("""
 <!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
     body { font-family: sans-serif; background: #000c1d; color: white; padding-bottom: 70px; margin: 0; }
-    header { background: #001a33; padding: 15px; text-align: center; border-bottom: 2px solid #00aaff; position: sticky; top: 0; }
+    header { background: #001a33; padding: 15px; text-align: center; border-bottom: 2px solid #00aaff; position: sticky; top: 0; z-index: 100; }
     .card { background: #162435; padding: 15px; margin: 10px; border-radius: 10px; border-left: 5px solid #00aaff; }
     a { text-decoration: none; color: #fff; font-weight: bold; display: block; }
     small { color: #00d4ff; display: block; margin-top: 5px; }
